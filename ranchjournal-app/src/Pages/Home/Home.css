@@ -1,0 +1,373 @@
+h1,
+p,
+a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+
+.Home {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4vw;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+    width: 100%;
+    height: 35vw;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bckgroundimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./../../assets/graficheskoe-izobrazhenie-s-oranzhevymi-metrami-vyxodyashhimi-iz-raznyx-stran.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.headerLeftBox {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.headerRightBox {
+    width: 22vw;
+    height: 30vw;
+    border: 0.3vw solid white;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLeftBox button {
+    width: 15vw;
+    height: 2vw;
+    font-size: .75vw;
+    color: #ff6400;
+    border-radius: 1vw;
+    outline: none;
+    border: none;
+    background-color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.RightImgBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.RightImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.Arhiv {
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ArxivTitle h1 {
+    width: 22vw;
+    letter-spacing: .1vw;
+    text-align: center;
+    margin-top: 3vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    border-bottom: .3vw solid #ff6400;
+    padding-bottom: .5vw;
+    color: #ff6400;
+}
+
+.ArxivContainersBox {
+    margin-top: 4vw;
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    gap: 4vw;
+}
+
+.ArxivContainers {
+    width: 10vw;
+    height: 6vw;
+    border: .1vw solid rgba(255, 102, 0, 0.13);
+    border-radius: .5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.JournalGlavTitle {
+    color: #ff6400;
+}
+
+.ContainersIcons {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: -.8vw;
+    font-size: 1.5vw;
+    color: #ff6400;
+}
+
+.ContainersText {
+    font-size: .9vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #ff6400;
+}
+
+.Journal {
+    width: 100%;
+    min-height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(216, 216, 216, 0.082);
+    padding-bottom: 50px;
+}
+
+.JournalTitle h1 {
+    width: 22vw;
+    letter-spacing: .1vw;
+    text-align: center;
+    margin-top: 3vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    border-bottom: .3vw solid #ff6400;
+    padding-bottom: .5vw;
+}
+
+.JournalContainersBox {
+    margin-top: 4vw;
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.JournalContainer {
+    width: 10vw;
+    height: 6vw;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.171) 0 0 .2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.JournalContainerIcon {
+    color: #ff6400;
+    font-size: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    border: .1vw solid #ff6400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.JournalContainerText {
+    text-align: center;
+    font-size: .6vw;
+    font-family: sans-serif;
+    letter-spacing: .01vw;
+    color: rgb(119, 119, 119);
+}
+
+.Video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+    width: 100%;
+    height: 40vw;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+video {
+    width: 45vw;
+    border-radius: 1vw;
+}
+
+.Massage {
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MassageTitle h1 {
+    width: 22vw;
+    letter-spacing: .1vw;
+    text-align: center;
+    margin-top: 3vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    border-bottom: .3vw solid #ff6400;
+    padding-bottom: .5vw;
+    color: #ff6400;
+}
+
+.MassageInputBox {
+    margin-top: 4vw;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.Name {
+    width: 100%;
+    height: 2vw;
+    border-radius: 1vw;
+    border: .1vw solid rgba(189, 187, 187, 0.637);
+    padding: 0 1vw;
+    font-size: .8vw;
+    outline: none;
+}
+
+.Email {
+    width: 100%;
+    height: 2vw;
+    border-radius: 1vw;
+    border: .1vw solid rgba(189, 187, 187, 0.637);
+    padding: 0 1vw;
+    font-size: .8vw;
+    outline: none;
+}
+
+.Type {
+    width: 100%;
+    height: 10vw;
+    border-radius: 1vw;
+    border: .1vw solid rgba(189, 187, 187, 0.637);
+    padding: .7vw 1vw;
+    font-size: .8vw;
+    outline: none;
+
+}
+
+.Type textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: .8vw;
+    font-family: sans-serif;
+}
+
+.MassageButton {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MassageButton button {
+    width: 30vw;
+    height: 2vw;
+    border: none;
+    outline: none;
+    background-color: #ff6400;
+    border-radius: 1vw;
+    color: white;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* swiper style ================================================================= */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

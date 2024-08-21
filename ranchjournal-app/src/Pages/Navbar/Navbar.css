@@ -1,0 +1,145 @@
+.Navbar {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 4vw;
+    justify-content: flex-end;
+    background-color: #ff6400;
+}
+
+.navObsh {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 73vw;
+    padding: 0 10vw;
+}
+
+.NavLeftBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10vw;
+    top: 0;
+    width: 5vw;
+    height: 100%;
+}
+
+.NavBoxLogo {
+    width: 3vw;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.NavBoxLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.MultyLang {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 55vw;
+    padding-left: 6vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul {
+    display: flex;
+    gap: 2vw;
+
+}
+
+nav ul li {
+    list-style: none;
+}
+
+
+nav ul li a {
+    font-size: .9vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    list-style: none;
+    font-weight: bold;
+}
+
+.toggle-button {
+    padding: .5vw 1.3vw;
+    background-color: #ff6400;
+    box-shadow: white 0 0 1vw;
+    color: #fff;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    font-size: 1wv;
+}
+
+.dropdown {
+    position: absolute;
+    top: 3vw;
+    width: 7vw;
+    box-shadow: grey 0 0 1vw;
+    border-radius: 1vw;
+    background-color: white;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: auto;  
+    z-index: 999;
+}
+
+.dropdown .toggle-button {
+    padding: 10px 20px;
+    background-color: #FF6400;
+    box-shadow: white 0 0 1vw;
+    color: #fff;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100px);
+}
+
+.dropdown ul {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    transform: translateX(-20px);
+}
+
+.dropdown ul li {
+    font-family: sans-serif;
+    font-weight: bold;
+    list-style: none;
+    cursor: pointer;
+}
+
+
+.selected-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.no-item {
+    padding: 10px;
+    color: #999;
+}

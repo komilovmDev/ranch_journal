@@ -1,0 +1,498 @@
+.NavBoxMenu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .Home {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 121vw;
+    }
+
+    .Navbar {
+        height: 25vw;
+    }
+
+    .NavLeftBox {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 50vw;
+        align-items: center;
+    }
+
+    .headerRightBox {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .NavBoxLogo {
+        width: 18vw;
+        height: 18vw;
+        display: flex;
+    }
+
+    .NavBoxMenu {
+        display: flex;
+    }
+
+    .NavBoxMenu button {
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 10vw;
+        color: white;
+    }
+
+    header {
+        width: 100%;
+        height: 100vw;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .headerLeftBox {
+        width: 100%;
+        margin: 0px 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4vw;
+    }
+
+    .headerLeftBox h1 {
+        width: 100%;
+        font-size: 4vw;
+    }
+
+    .RightImgBox {
+        display: none;
+    }
+
+    .headerLeftBox button {
+        width: 83vw;
+        height: 8vw;
+        font-size: .75vw;
+        color: #ff6400;
+        border-radius: 8vw;
+        outline: none;
+        border: none;
+        background-color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 3.5vw;
+    }
+
+    .Arhiv {
+        height: auto;
+    }
+
+    .ArxivContainersBox {
+        justify-content: center;
+        gap: 15vw;
+        /* flex-direction: column; */
+    }
+
+    .ArxivContainersBox a {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .ArxivTitle {
+        width: 90%;
+        padding: 25vw 0;
+
+    }
+
+    .ArxivTitle h1 {
+        width: 100%;
+        font-size: 22px;
+        border-bottom: 1vw solid #ff6400;
+    }
+
+    .ArxivContainers {
+        width: 90vw;
+        height: 30vw;
+    }
+
+    .ContainersIcons {
+        width: 10vw;
+        font-size: 10vw;
+    }
+
+    .ContainersText {
+        font-size: 4.5vw;
+    }
+
+    .Journal {
+        height: auto;
+    }
+
+    .JournalContainersBox {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 15vw;
+    }
+
+    .JournalContainersBox a {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .JournalGlavTitle {
+        width: 90%;
+        padding: 25vw 0;
+        border: none;
+    }
+
+    .JournalGlavTitle h1 {
+        width: 100%;
+        font-size: 22px;
+        border-bottom: 1vw solid #ff6400;
+    }
+
+    .JournalContainer {
+        width: 90vw;
+        height: 40vw;
+        display: flex;
+        flex-direction: column;
+        gap: 10vw;
+
+    }
+
+    .JournalContainerIcon {
+        width: 13vw;
+        height: 13vw;
+        font-size: 10vw;
+    }
+
+    .JournalContainerText {
+        font-size: 3.8vw;
+    }
+
+    .Video {
+        height: 100vw;
+        align-items: center;
+        justify-content: center;
+        margin: 20vw 0;
+    }
+
+    video {
+        width: 80vw;
+        border-radius: 1vw;
+    }
+
+    .MassageTitle {
+        padding: 15vw 0;
+    }
+
+    .MassageTitle h1 {
+        width: 100%;
+        font-size: 22px;
+        border-bottom: 1vw solid #ff6400;
+    }
+
+    .MassageInputBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vw;
+    }
+
+    .Name {
+        width: 90%;
+        height: 7vw;
+        border-radius: 5vw;
+        border: 0.1vw solid rgba(189, 187, 187, 0.637);
+        padding: 0 1vw;
+        font-size: 2.5vw;
+        outline: none;
+    }
+
+    .Email {
+        width: 90%;
+        height: 7vw;
+        border-radius: 5vw;
+        border: 0.1vw solid rgba(189, 187, 187, 0.637);
+        padding: 0 1vw;
+        font-size: 2.5vw;
+        outline: none;
+    }
+
+    .Type {
+        width: 90%;
+        height: 20vw;
+        border-radius: 3vw;
+        border: 0.1vw solid rgba(189, 187, 187, 0.637);
+        padding: 0.7vw 1vw;
+        font-size: 2.5vw;
+        outline: none;
+    }
+
+    .Type textarea {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 2.5vw;
+        font-family: sans-serif;
+    }
+
+    .MassageButton {
+        margin-top: 4vw;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MassageButton button {
+        width: 50vw;
+        height: 7vw;
+        border: none;
+        outline: none;
+        background-color: #ff6400;
+        border-radius: 4vw;
+        color: white;
+        font-size: 3vw;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Journalview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+        width: 90vw;
+        margin-bottom: 3vw;
+    }
+
+    .Journalview aside {
+        width: 90vw;
+        height: auto;
+        border-radius: 5vw;
+    }
+
+    .JournalasideTitle {
+        font-size: 5vw;
+        height: 10vw;
+        padding: 3vw;
+    }
+
+    .JournalButton a {
+        font-size: 5vw;
+        height: 10vw;
+        font-weight: 400;
+        padding: 3vw;
+    }
+
+    .JournalContentRight {
+        width: 90vw;
+        border-radius: 5vw;
+    }
+
+    .JournalTitle {
+        height: 15vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 3vw;
+    }
+
+    .JournalTitle h1 {
+        width: 100%;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+
+    .JournalContentContainer {
+        gap: 10vw;
+        padding: 2.5vw;
+    }
+
+    .ContentContainerBox {
+        padding: 2vw;
+        border-radius: 4vw;
+    }
+
+    .ContentContainerBox h3 {
+        font-size: 4.5vw;
+        font-weight: 400;
+    }
+
+    .ContentContainerBox p {
+        font-size: 4vw;
+        gap: 3vw;
+        font-weight: 400;
+    }
+
+
+    .dropdown-menu {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        margin: 0;
+        border-radius: 4px;
+        padding: 0;
+        width: 100%;
+        height: 300vw;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s, right 0.3s;
+        background-color: #ff6400;
+    }
+
+    .dropdown-menu.active {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        /* Показываем меню, смещая его вправо до 0 позиции */
+    }
+
+    .Dropdown-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+    }
+
+    .Dropdown-content ul {
+        width: 100%;
+        position: absolute;
+        top: 30vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7vw;
+    }
+
+    .Dropdown-content ul li {
+        list-style: none;
+        font-family: sans-serif;
+        font-size: 5vw;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+
+    .Dropdown-content ul li a {
+        color: white;
+    }
+
+    .CloseButton {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: 1;
+        top: 6vw;
+        right: 10vw;
+    }
+
+    .Burger-nav-logo {
+        position: absolute;
+        top: 3vw;
+        left: 5vw;
+        width: 18vw;
+        height: 18vw;
+        overflow: hidden;
+    }
+
+    .Burger-nav-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .Burger-nav {
+        position: relative;
+    }
+
+    .UmumiyTitle {
+        height: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .UmumiyTitle h1 {
+        width: 55vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4.5vw;
+        border-bottom: 1vw solid #ff6400;
+    }
+
+    .UmumiyContentContainer p {
+        font-size: 4vw;
+        text-align: justify;
+        padding: 2vw;
+    }
+
+    .UmumiyContentContainer {
+        border: none;
+    }
+
+    .MultyLang-Obsh {
+        display: none;
+    }
+
+    .MultyLang {
+        border-top: 1vw solid white;
+        padding-top: 5vw;
+        width: 85%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .MultyLang .toggle-button {
+        width: 18vw;
+        height: 7.5vw;
+        border-radius: 5vw;
+    }
+
+    .MultyLang .dropdown {
+        position: relative;
+        width: 25vw;
+        height: 20vw;
+        display: flex;
+        align-items: center;
+        border-radius: 5vw;
+        left: 0;
+    }
+
+    .MultyLang .dropdown ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        gap: 2vw;
+        padding: 1.5vw 10vw;
+    }
+
+    .MultyLang .dropdown ul li {
+        font-size: 4vw;
+    }
+}

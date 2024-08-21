@@ -1,0 +1,134 @@
+.Archivview {
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    gap: 7vw;
+}
+
+aside {
+    margin-top: 5.5vw;
+    width: 15vw;
+    height: auto;
+    border:.1vw solid #ff6400;
+    border-radius:.5vw;
+    overflow: hidden;
+}
+
+.AsideTitle {
+    width: 100%;
+    height: 2vw;
+    padding: 0 .5vw;
+    display: flex;
+    align-items: center;
+    background-color:#ff6400a1;
+    font-size: 1vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    color:white;
+}
+
+.AsideButton {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.AsideButton a{
+    text-decoration: none;
+    width: 100%;
+    height: 2vw;
+    padding: 0 .5vw;
+    border-top:.1vw solid rgba(128, 128, 128, 0.288);
+    transition: all .3s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .8vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    color:#ff6400;
+}
+
+.AsideButton a:hover{ 
+    background-color:rgba(128, 128, 128, 0.123);
+}
+
+
+.ContentContainer {
+    margin-top: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 100%;
+    height: auto;
+}
+
+.ContantContainerBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    width: 8vw;
+    height: 10vw;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: .1vw solid #ff6400;
+    padding: 0 .2vw;
+}
+
+.ContantIcon {
+    width: 2vw;
+    height: 2vw;
+    background-color:white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -1.2vw;
+    left: 39%;
+    font-size: 1vw;
+    color:#ff6400;
+}
+
+.ContantText {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    font-size: .8vw;
+    font-family: sans-serif;
+}
+
+.ContantTextTitle {
+    color: #ff6400;
+    font-weight: bold;
+}
+
+.ContantTextPages {
+    color: #ff6400;
+}
+
+.ContantTextTime {
+    color: #ff6400;
+    font-weight: bold;
+}
+
+.UmumiyTitle  {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UmumiyTitle h1 {
+    width: 20vw;
+    letter-spacing: .1vw;
+    text-align: center;
+    margin-top: 2vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    text-transform: uppercase;
+    border-bottom: .3vw solid #ff6400;
+    padding-bottom: .5vw;
+}
