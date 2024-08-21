@@ -30,6 +30,7 @@ export default function Taxririyat() {
 
     const getTaxriryat = async () => {
         const response = await axios.get("https://api.ranchjournal.uz/taxririyat/taxriryat/")
+        setTaxData(response.data.results)
     }
 
 
@@ -65,16 +66,35 @@ export default function Taxririyat() {
                 <div className="TaxrirTitle">
                     <h1>Taxrirlar</h1>
                 </div>
-                <div className="JournalContentContainer">
-                    <div className="taxrirCon">
-                        <div className="taxrirConImg">
-                            <img src="" alt="" />
+                {
+                    taxData.map(item => (
+                        <div className="JournalContentContainer">
+                            <div className="taxrirCon">
+                                <div className="taxrirConImg">
+                                    <img src={item.image} alt="" />
+                                </div>
+                                <div className="taxrirRight">
+                                    <ul>
+                                        <li>{item.full_name}</li>
+                                        <li dangerouslySetInnerHTML={{__html: item.mini_desc}}></li>
+                                        <br />
+                                        <label htmlFor="">telfon:</label>
+                                        <li>{item.phone}</li>
+                                        <br />
+                                        <label htmlFor="">Title:</label>
+                                        <li>{item.title}</li>
+                                        <br />
+                                        <label htmlFor="">lavozim:</label>
+                                        <li>{item.lavozim}</li>
+                                        <br />
+                                        <label htmlFor="">education:</label>
+                                        <li>{item.education}</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div className="taxrirRight">
-
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
             </div>
         </section>
     )

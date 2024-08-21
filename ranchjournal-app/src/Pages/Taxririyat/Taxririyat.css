@@ -13,3 +13,22 @@
     margin: 1vw 0;
     border-bottom: .2vw solid #ff6400; 
 }
+
+.JournalContentContainer {
+    display: flex;
+}
+
+.taxrirCon {
+    display: flex;
+    height: 100%;
+}
+
+
+.taxrirConImg {
+    width: 8vw;
+    object-fit: cover;
+}
+
+.taxrirConImg img {
+    width: 100%;
+}
