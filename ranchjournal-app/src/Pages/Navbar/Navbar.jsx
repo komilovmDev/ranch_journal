@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './Navbar.css';
-import Logo from './../../assets/logo-ranch-jurnal.png';
+import Logo from '../../logoJournal.png';
 import { Link, useLocation } from 'react-router-dom';
 import { MdMenu } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
