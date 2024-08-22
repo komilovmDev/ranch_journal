@@ -64,7 +64,7 @@ export default function Taxririyat() {
             </aside>
             <div className="JournalContentRight">
                 <div className="TaxrirTitle">
-                    <h1>Taxrirlar</h1>
+                    <h1>Tahririyat</h1>
                 </div>
                 {
                     taxData.map(item => (
