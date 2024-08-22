@@ -77,17 +77,10 @@ export default function Taxririyat() {
                                     <ul>
                                         <li>{item.full_name}</li>
                                         <li dangerouslySetInnerHTML={{__html: item.mini_desc}}></li>
-                                        <br />
-                                        <label htmlFor="">telfon:</label>
                                         <li>{item.phone}</li>
-                                        <br />
                                         {/* <label htmlFor="">Title:</label>
                                         <li>{item.title}</li> */}
-                                        <br />
-                                        <label htmlFor="">lavozim:</label>
                                         <li>{item.lavozim}</li>
-                                        <br />
-                                        <label htmlFor="">education:</label>
                                         <li>{item.education}</li>
                                     </ul>
                                 </div>

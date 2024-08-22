@@ -26,9 +26,18 @@
 
 .taxrirConImg {
     width: 8vw;
-    object-fit: cover;
+    height: 8vw;
 }
 
 .taxrirConImg img {
-    width: 100%;
+    width: 8vw;
+    height: 8vw;
+
+}
+
+.taxrirRight ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: sans-serif;
 }
