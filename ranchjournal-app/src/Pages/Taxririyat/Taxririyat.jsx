@@ -81,8 +81,8 @@ export default function Taxririyat() {
                                         <label htmlFor="">telfon:</label>
                                         <li>{item.phone}</li>
                                         <br />
-                                        <label htmlFor="">Title:</label>
-                                        <li>{item.title}</li>
+                                        {/* <label htmlFor="">Title:</label>
+                                        <li>{item.title}</li> */}
                                         <br />
                                         <label htmlFor="">lavozim:</label>
                                         <li>{item.lavozim}</li>
