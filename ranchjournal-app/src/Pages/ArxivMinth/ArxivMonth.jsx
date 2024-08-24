@@ -11,7 +11,7 @@ export default function ArxivMonth() {
 
     const getArxivMonth = async () => {
         const response = await axios.get(`https://api.ranchjournal.uz/arxiv/arxiv-cats/${id.id}/`);
-        setData(response.data)
+        setData(response.data.results)
     }
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function ArxivMonth() {
                     <h1>Arxiv</h1>
                 </div>
                 <div className="ArxivContainersBox">
-                    {data.children && data.children.map(item => (
+                    {data.map(item => (
                         <Link key={item.id} to={`/arxivview/${item.id}`}>
                             <div className="ArxivContainers">
                                 <div className="ContainersIcons">

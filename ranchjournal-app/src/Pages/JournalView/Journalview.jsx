@@ -15,7 +15,7 @@ export default function Journalview() {
     const getJournal = async () => {
         try {
             const response = await axios.get("https://api.ranchjournal.uz/journal-categories/");
-            setData(response.data);
+            setData(response.data.results);
         } catch (error) {
             console.error("Error fetching journal categories:", error);
         }
@@ -24,7 +24,7 @@ export default function Journalview() {
     const getJournalInfo = async () => {
         try {
             const response = await axios.get(`https://api.ranchjournal.uz/jurnals/${id}/by_category/`);
-            setJournalInfo(response.data);
+            setJournalInfo(response.data.results);
         } catch (error) {
             console.error("Error fetching journal info:", error);
         }

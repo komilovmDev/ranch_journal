@@ -14,12 +14,12 @@ export default function Archivview() {
 
     const getCat = async () => {
         const response = await axios.get('https://api.ranchjournal.uz/arxiv/arxiv-cats/')
-        setData(response.data)
+        setData(response.data.results)
     }
 
     const getArxiv = async () => {
         const response = await axios.get(`https://api.ranchjournal.uz/arxiv/arxivs/${id}/by_category/`);
-        setArxiv(response.data)
+        setArxiv(response.data.results)
     }
 
     useEffect(() => {
