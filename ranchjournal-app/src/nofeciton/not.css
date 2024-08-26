@@ -1,0 +1,18 @@
+/* NotificationBar.css */
+.notification-bar {
+    background-color: #ffcc00;
+    /* Yellow background */
+    color: #000;
+    /* Black text */
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.notification-bar p {
+    margin: 0;
+}

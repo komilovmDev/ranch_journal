@@ -6,13 +6,14 @@ import Home from './Pages/Home/Home';
 import Journal from './Pages/Journal/Journal';
 import Journalview from './Pages/JournalView/Journalview';
 import Navbar from './Pages/Navbar/Navbar';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import Umumiy from './Pages/Umumiy/Umumiy';
 import Taxririyat from './Pages/Taxririyat/Taxririyat';
-import './Responsive/Responsive.css'
+import './Responsive/Responsive.css';
 import AppContext from './context/AppContext';
 import { useState } from 'react';
 import JurnalTalablari from './Pages/jurnalTalablari/JurnalTalablari';
+import NotificationBar from './nofeciton/NotificationBar';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
   return (
     <AppContext.Provider value={{ leng, setLeng }}>
       <div className="App">
+        <NotificationBar /> {/* Add the NotificationBar component here */}
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

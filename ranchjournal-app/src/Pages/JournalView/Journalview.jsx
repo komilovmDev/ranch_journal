@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { FaArchive, FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Добавлены стрелки
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState, useEffect, useContext } from "react";
 import axios from 'axios';
 import './Journalview.css';
@@ -10,7 +10,8 @@ export default function Journalview() {
     const [journalInfo, setJournalInfo] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
-    const { id } = useParams()
+    const { id } = useParams();
+    const { leng } = useContext(AppContext);
 
     const getJournal = async () => {
         try {
@@ -24,23 +25,22 @@ export default function Journalview() {
     const getJournalInfo = async () => {
         try {
             const response = await axios.get(`https://api.ranchjournal.uz/jurnals/${id}/by_category/`);
-            setJournalInfo(response.data.results);
+            setJournalInfo(response.data.results || []); // Fallback to an empty array if results are undefined
         } catch (error) {
             console.error("Error fetching journal info:", error);
+            setJournalInfo([]); // Set an empty array in case of error
         }
     }
 
     useEffect(() => {
         getJournal();
         getJournalInfo();
-    }, []);
-
-    const { leng, setLeng } = useContext(AppContext)
+    }, [id]); // Refetch data when `id` changes
 
     // Logic to calculate current items to display based on currentPage
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = journalInfo.slice(indexOfFirstItem, indexOfLastItem)
+    const currentItems = journalInfo.slice(indexOfFirstItem, indexOfLastItem);
 
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -48,7 +48,7 @@ export default function Journalview() {
     // Rendering pagination buttons
     const renderPaginationButtons = () => {
         const totalPages = Math.ceil(journalInfo.length / itemsPerPage);
-        const visiblePages = 5; // Ограничение на количество отображаемых кнопок
+        const visiblePages = 5;
         const buttons = [];
         let startPage = currentPage - Math.floor(visiblePages / 2);
         startPage = Math.max(startPage, 1);
@@ -72,19 +72,19 @@ export default function Journalview() {
                 </div>
                 <div className="JournalButton">
                     {data.map(item => (
-                        <Link onClick={() => getJournalInfo()} to={`/jurnalwiev/${item.id}`}>{item.name}</Link>
+                        <Link key={item.id} onClick={() => getJournalInfo()} to={`/jurnalwiev/${item.id}`}>{item.name}</Link>
                     ))}
                 </div>
             </aside>
             <div className="JournalContentRight">
                 <div className="JournalTitle">
-                    <h1>Actual problems of Mathematics, Physics and Mecanicss</h1>
+                    <h1>Actual problems of Mathematics, Physics and Mechanics</h1>
                 </div>
                 <div className="JournalContentContainer">
                     {currentItems.map(item => (
                         <div className="ContentContainerBox" key={item.id}>
-                            <h3>{leng == 'uz' ? item.title : leng == 'ru' ? item.title_ru : item.title_en}</h3>
-                            <p dangerouslySetInnerHTML={{ __html: leng == 'uz' ? item.desc : leng == 'ru' ? item.desc_ru : item.desc_en }}></p>
+                            <h3>{leng === 'uz' ? item.title : leng === 'ru' ? item.title_ru : item.title_en}</h3>
+                            <p dangerouslySetInnerHTML={{ __html: leng === 'uz' ? item.desc : leng === 'ru' ? item.desc_ru : item.desc_en }}></p>
                         </div>
                     ))}
                 </div>
