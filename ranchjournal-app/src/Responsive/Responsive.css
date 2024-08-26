@@ -495,4 +495,10 @@
     .MultyLang .dropdown ul li {
         font-size: 4vw;
     }
+
+    .TaxrirTitle h1 {
+        width: 55vw;
+        font-weight: 800;
+        font-size: small;
+    }
 }
