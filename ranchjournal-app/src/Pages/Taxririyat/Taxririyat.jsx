@@ -104,10 +104,11 @@ export default function Taxririyat() {
                                                 <div className="taxrirRight">
                                                     <ul>
                                                         <li>{taxriryat.full_name}</li>
-                                                        <li dangerouslySetInnerHTML={{ __html: taxriryat.mini_desc }}></li>
-                                                        <li>{taxriryat.phone}</li>
+                                                        <li dangerouslySetInnerHTML={{ __html: taxriryat.daraja }}></li>
+                                                        <li>{taxriryat.azo}</li>
                                                         <li>{taxriryat.lavozim}</li>
-                                                        <li>{taxriryat.education}</li>
+                                                        <li>Tell: {taxriryat.phone}</li>
+                                                        <li>{taxriryat.email}</li>
                                                     </ul>
                                                 </div>
                                             </div>
