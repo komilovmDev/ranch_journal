@@ -519,5 +519,11 @@
         font-size: 4vw;
     }
 
+    .notification-bar {
+        width: 100vw;
+        font-size: smaller;
+        margin-right: 32vw;
+        margin-top: 200vw;
+    }
 
 }

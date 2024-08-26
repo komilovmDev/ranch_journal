@@ -9,8 +9,11 @@
     font-weight: bold;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 30%;
     z-index: 1000;
+    margin-top: 4vw;
+    right: -1vw;
+    border-radius: 10vw;
 }
 
 .notification-bar p {
