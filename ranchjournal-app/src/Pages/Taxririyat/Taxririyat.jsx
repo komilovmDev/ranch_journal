@@ -107,7 +107,7 @@ export default function Taxririyat() {
                                                         <li dangerouslySetInnerHTML={{ __html: taxriryat.daraja }}></li>
                                                         <li>{taxriryat.azo}</li>
                                                         <li>{taxriryat.lavozim}</li>
-                                                        <li>Tell: {taxriryat.phone}</li>
+                                                        <li>Tel: {taxriryat.phone}</li>
                                                         <li>{taxriryat.email}</li>
                                                     </ul>
                                                 </div>

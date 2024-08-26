@@ -40,7 +40,7 @@ export default function Journalview() {
     // Logic to calculate current items to display based on currentPage
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = journalInfo.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = journalInfo.slice(indexOfFirstItem, indexOfLastItem)
 
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
