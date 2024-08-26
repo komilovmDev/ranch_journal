@@ -32,7 +32,7 @@ function App() {
           <Route path='/jurnalwiev/:id' element={<Journalview />} />
           <Route path='/Umumiy' element={<Umumiy />} />
           <Route path='/Talablari' element={<JurnalTalablari />} />
-          <Route path='/Taxririyat' element={<Taxririyat />} />
+          <Route path='/Tahririyat' element={<Taxririyat />} />
         </Routes>
       </div>
     </AppContext.Provider>

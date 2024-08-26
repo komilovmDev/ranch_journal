@@ -8,6 +8,10 @@ export default function Taxririyat() {
     const [journalInfo, setJournalInfo] = useState([]);
     const [taxData, setTaxData] = useState([]);
     const [taxData2, setTaxData2] = useState([]);
+    const [taxData3, setTaxData3] = useState([]);
+    const [taxData4, setTaxData4] = useState([]);
+    const [taxData5, setTaxData5] = useState([]);
+
     const [loading, setLoading] = useState(true); // Add loading state
     const [error, setError] = useState(null); // Add error state
 
@@ -36,9 +40,12 @@ export default function Taxririyat() {
             const response = await axios.get("https://api.ranchjournal.uz/taxririyat/taxriryat/");
             const data = response.data.results;
             // Exclude the first element
-            const updatedData = data.slice(1);
+            const updatedData = data;
             setTaxData(updatedData);
+
+
             setTaxData2(response.data.results);
+
         } catch (error) {
             console.error("Error fetching taxriryat data:", error);
             setError("Failed to load taxriryat data.");
@@ -81,50 +88,39 @@ export default function Taxririyat() {
             </aside>
             <div>
                 <div className="JournalContentRight">
-                    <div className="TaxrirTitle">
-                        <h1>Tahririyat</h1>
-                    </div>
-                    {taxData.length > 0 && (
-                        <div className="JournalContentContainer">
-                            <div className="taxrirCon">
-                                <div className="taxrirConImg">
-                                    <img src={taxData2[0].image} alt={taxData[0].full_name} />
+                    {Array.isArray(taxData) && taxData.length > 0 ? (
+                        taxData.map(item => (
+                            <div key={item.id}>
+                                <div className="TaxrirTitle">
+                                    <h1>{item.name}</h1>
                                 </div>
-                                <div className="taxrirRight">
-                                    <ul>
-                                        <li>{taxData2[0].full_name}</li>
-                                        <li dangerouslySetInnerHTML={{ __html: taxData2[0].mini_desc }}></li>
-                                        <li>{taxData2[0].phone}</li>
-                                        <li>{taxData2[0].lavozim}</li>
-                                        <li>{taxData2[0].education}</li>
-                                    </ul>
-                                </div>
+                                {Array.isArray(item.taxriryat_set) && item.taxriryat_set.length > 0 ? (
+                                    item.taxriryat_set.map(taxriryat => (
+                                        <div className="JournalContentContainer" key={taxriryat.id}>
+                                            <div className="taxrirCon">
+                                                <div className="taxrirConImg">
+                                                    <img src={taxriryat.image} alt={taxriryat.full_name} />
+                                                </div>
+                                                <div className="taxrirRight">
+                                                    <ul>
+                                                        <li>{taxriryat.full_name}</li>
+                                                        <li dangerouslySetInnerHTML={{ __html: taxriryat.mini_desc }}></li>
+                                                        <li>{taxriryat.phone}</li>
+                                                        <li>{taxriryat.lavozim}</li>
+                                                        <li>{taxriryat.education}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p>No editorial team data available.</p>
+                                )}
                             </div>
-                        </div>
+                        ))
+                    ) : (
+                        <p>No data available.</p>
                     )}
-                </div>
-                <div className="JournalContentRight">
-                    <div className="TaxrirTitle">
-                        <h1>Tahririyat</h1>
-                    </div>
-                    {taxData.map(item => (
-                        <div className="JournalContentContainer" key={item.id}>
-                            <div className="taxrirCon">
-                                <div className="taxrirConImg">
-                                    <img src={item.image} alt={item.full_name} />
-                                </div>
-                                <div className="taxrirRight">
-                                    <ul>
-                                        <li>{item.full_name}</li>
-                                        <li dangerouslySetInnerHTML={{ __html: item.mini_desc }}></li>
-                                        <li>{item.phone}</li>
-                                        <li>{item.lavozim}</li>
-                                        <li>{item.education}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
                 </div>
             </div>
         </section>

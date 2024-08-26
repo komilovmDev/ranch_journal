@@ -24,7 +24,7 @@ export default function Journalview() {
     const getJournalInfo = async () => {
         try {
             const response = await axios.get(`https://api.ranchjournal.uz/jurnals/${id}/by_category/`);
-            setJournalInfo(response.data.results);
+            setJournalInfo(response.data.results);  
         } catch (error) {
             console.error("Error fetching journal info:", error);
         }
@@ -35,7 +35,7 @@ export default function Journalview() {
         getJournalInfo();
     }, []);
 
-    const {leng , setLeng} = useContext(AppContext)
+    const { leng, setLeng } = useContext(AppContext)
 
     // Logic to calculate current items to display based on currentPage
     const indexOfLastItem = currentPage * itemsPerPage;
