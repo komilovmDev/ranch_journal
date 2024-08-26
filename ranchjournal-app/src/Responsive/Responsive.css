@@ -327,8 +327,31 @@
     }
 
     .JournalContentContainer {
+
         gap: 10vw;
         padding: 2.5vw;
+    }
+
+    .TaxrirTitle h1 {
+        width: 55vw;
+        font-weight: 800;
+        font-size: small;
+        gap: 20vw;
+    }
+
+    .taxrirCon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20vw;
+    }
+
+    .taxrirConImg img {
+        margin-top: -19vw;
+        margin-left: -9vw;
+        width: 28vw;
+        height: 30vw;
+
     }
 
     .ContentContainerBox {
@@ -496,9 +519,5 @@
         font-size: 4vw;
     }
 
-    .TaxrirTitle h1 {
-        width: 55vw;
-        font-weight: 800;
-        font-size: small;
-    }
+
 }
