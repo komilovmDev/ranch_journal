@@ -343,14 +343,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 20vw;
+        margin-top: 50vw;
     }
 
     .taxrirConImg img {
-        margin-top: -19vw;
-        margin-left: -9vw;
-        width: 28vw;
-        height: 30vw;
+        margin-top: -50vw;
+        margin-left: -26vw;
+        width: 51vw;
+        height: 54vw;
 
     }
 
