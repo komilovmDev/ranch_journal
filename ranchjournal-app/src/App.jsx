@@ -14,6 +14,7 @@ import AppContext from './context/AppContext';
 import { useState } from 'react';
 import JurnalTalablari from './Pages/jurnalTalablari/JurnalTalablari';
 import NotificationBar from './nofeciton/NotificationBar';
+import Footer from './Pages/Footer/Footer';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/Talablari' element={<JurnalTalablari />} />
           <Route path='/Tahririyat' element={<Taxririyat />} />
         </Routes>
+        <Footer />
       </div>
     </AppContext.Provider>
   );

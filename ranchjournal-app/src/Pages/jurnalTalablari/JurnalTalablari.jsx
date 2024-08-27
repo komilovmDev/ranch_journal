@@ -1,21 +1,16 @@
-import { Link, useParams } from "react-router-dom";
-import { FaArchive } from "react-icons/fa";
-import { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
-import AppContext from '../../context/AppContext';
-
+import archive from '../../assets/archive.png';
+import archive2 from '../../assets/archive2.png';
+import './jurnal.css'
 
 export default function JurnalTalablari() {
-
     return (
-        <section className='Archivview'>
+        <div className="ArchiveMain">
+            <section className='Archivview'>
+                <img src={archive} alt="" />
+                <img src={archive2} alt="" />
+            </section>
 
-            <div className="ContentRight">
+        </div>
 
-                <div className="ContentContainer">
-
-                </div>
-            </div>
-        </section>
     )
 }

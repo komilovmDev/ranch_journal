@@ -1,0 +1,49 @@
+.ArchiveFotter {
+    width: 100%;
+    background-color: #ff6400;
+
+    color: #fff;
+    bottom: -0vw;
+}
+
+.ArchiFotterCont {
+    width: 70vw;
+    height: 10vw;
+    display: flex;
+    padding: 0 14.7vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ArchiFotterCont div {
+    top: -6vw;
+}
+
+.ArchiFotterCont div p {
+    font-size: .9vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+
+    font-weight: bold;
+}
+
+.ArchiFotterCont div h5 h4 {
+    font-size: .9vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.ArchiFotterCont div h4 {
+    font-size: .9vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}

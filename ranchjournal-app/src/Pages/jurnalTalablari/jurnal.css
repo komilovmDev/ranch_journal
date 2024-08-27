@@ -1,0 +1,13 @@
+.Archivview {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.Archivview img {
+    margin: 20px 0;
+    width: 40vw;
+    height: 50vw;
+}
