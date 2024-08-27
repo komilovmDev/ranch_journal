@@ -57,6 +57,35 @@ export default function Home() {
         getHeader()
     }, [])
 
+    const sendMessageToTelegram = async (name, email, message) => {
+        const telegramApiUrl = `https://api.telegram.org/bot7294170389:AAGyi8pTzRQCRNDVKOhVznu5kye5Pqzb_Lw/sendMessage`;
+        const chatId = 5266665432; // Replace with your actual chat ID
+
+        const text = `
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
+        `;
+
+        try {
+            await axios.post(telegramApiUrl, {
+                chat_id: chatId,
+                text: text,
+            });
+            alert('Message sent successfully!');
+        } catch (error) {
+            console.error("Error sending message to Telegram:", error);
+            alert('Failed to send message. Please try again later.');
+        }
+    }
+
+    const handleSubmit = () => {
+        const name = document.querySelector('.Name').value;
+        const email = document.querySelector('.Email').value;
+        const message = document.querySelector('#massage').value;
+
+        sendMessageToTelegram(name, email, message);
+    }
 
 
     return (
@@ -137,7 +166,7 @@ export default function Home() {
             </section>
             <section className="Massage">
                 <div className="MassageTitle">
-                    <h1>{leng == 'ru' ? "НАПИШИТЕ НАМ СООБЩЕНИЕ" : leng == 'en' ? "DROP US A MESSAGE" : "DROP US A MESSAGE"}</h1>
+                    <h1>{leng === 'ru' ? "НАПИШИТЕ НАМ СООБЩЕНИЕ" : leng === 'en' ? "DROP US A MESSAGE" : "DROP US A MESSAGE"}</h1>
                 </div>
                 <div className="MassageInputBox">
                     <input className="Name" type="text" placeholder="Name:" minLength={4} maxLength={13} />
@@ -145,7 +174,7 @@ export default function Home() {
                     <label className="Type"><textarea name="massage" placeholder="Massage:" id="massage" cols="30" rows="10"></textarea></label>
                 </div>
                 <div className="MassageButton">
-                    <button>{leng == 'uz' ? "Submit" : leng == 'ru' ? "Представить" : "Submit"}</button>
+                    <button onClick={handleSubmit}>{leng === 'uz' ? "Submit" : leng === 'ru' ? "Представить" : "Submit"}</button>
                 </div>
             </section>
         </div>
