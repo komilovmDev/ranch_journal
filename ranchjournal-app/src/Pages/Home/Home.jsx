@@ -59,7 +59,7 @@ export default function Home() {
 
     const sendMessageToTelegram = async (name, email, message) => {
         const telegramApiUrl = `https://api.telegram.org/bot7294170389:AAGyi8pTzRQCRNDVKOhVznu5kye5Pqzb_Lw/sendMessage`;
-        const chatId = 5266665432; // Replace with your actual chat ID
+        const chatId = 984573662; // Replace with your actual chat ID
 
         const text = `
         Name: ${name}
