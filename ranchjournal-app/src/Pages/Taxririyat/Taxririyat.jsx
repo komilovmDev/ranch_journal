@@ -8,9 +8,9 @@ export default function Taxririyat() {
     const [journalInfo, setJournalInfo] = useState([]);
     const [taxData, setTaxData] = useState([]);
     const [taxData2, setTaxData2] = useState([]);
-    const [taxData3, setTaxData3] = useState([]);
-    const [taxData4, setTaxData4] = useState([]);
-    const [taxData5, setTaxData5] = useState([]);
+    // const [taxData3, setTaxData3] = useState([]);
+    // const [taxData4, setTaxData4] = useState([]);
+    // const [taxData5, setTaxData5] = useState([]);
 
     const [loading, setLoading] = useState(true); // Add loading state
     const [error, setError] = useState(null); // Add error state

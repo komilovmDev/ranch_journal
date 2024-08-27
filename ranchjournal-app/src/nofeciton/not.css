@@ -8,13 +8,13 @@
     text-align: center;
     font-weight: bold;
     position: fixed;
-    top: 0;
+    bottom: 0;
 
     z-index: 1000;
     margin-top: 4vw;
-    right: -0vw;
-    border-top-left-radius: 10vw;
-    border-bottom-left-radius: 10vw;
+    left: -0vw;
+    border-top-right-radius: 10vw;
+    border-bottom-right-radius: 10vw;
 
 }
 
