@@ -29,7 +29,7 @@ export default function Navbar() {
             { label: 'Jurnal Talablari', path: '/Talablari' },
             { label: 'Tahririyat', path: '/Tahririyat' },
             { label: 'Arxiv', path: '/arxiv' },
-            { label: 'Jurnal bo`limlari', path: '/journal' }
+            // { label: 'Jurnal bo`limlari', path: '/journal' }
         ],
         ru: [
             { label: 'ГЛАВНАЯ', path: '/' },
@@ -37,7 +37,7 @@ export default function Navbar() {
             { label: 'ТРЕБОВАНИЯ К ЖУРНАЛУ', path: '/Talablari' },
             { label: 'РЕДКОЛЛЕГИЯ', path: '/Tahririyat' },
             { label: 'АРХИВ', path: '/arxiv' },
-            { label: 'РАЗДЕЛЫ ЖУРНАЛА', path: '/journal' }
+            // { label: 'РАЗДЕЛЫ ЖУРНАЛА', path: '/journal' }
         ],
         en: [
             { label: 'HOME', path: '/' },
@@ -45,7 +45,7 @@ export default function Navbar() {
             { label: 'jOURNAL REQUIREMENTS', path: '/Talablari' },
             { label: 'EDITORIAL BOARD', path: '/Tahririyat' },
             { label: 'ARCHIVE', path: '/arxiv' },
-            { label: 'JOURNAL SECTIONS', path: '/journal' }
+            // { label: 'JOURNAL SECTIONS', path: '/journal' }
         ]
     };
 
