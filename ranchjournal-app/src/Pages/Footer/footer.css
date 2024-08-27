@@ -12,9 +12,11 @@
     color: white;
     font-family: sans-serif;
     font-weight: bold;
+    font-size: 1vw;
 }
 
 .FotterContainer div h5 {
+    font-size: .9vw;
     color: white;
     font-family: sans-serif;
     font-weight: bold;
