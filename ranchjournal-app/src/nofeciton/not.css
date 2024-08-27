@@ -10,7 +10,7 @@
     position: fixed;
     bottom: 0;
 
-    z-index: 1000;
+    z-index: 10;
     margin-top: 4vw;
     left: -0vw;
     border-top-right-radius: 10vw;

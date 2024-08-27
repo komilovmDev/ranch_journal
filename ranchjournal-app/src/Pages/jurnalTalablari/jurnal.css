@@ -1,6 +1,7 @@
 .Archivview {
-    display: flex;
+
     flex-direction: row;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
     gap: 10px;
@@ -10,4 +11,15 @@
     margin: 20px 0;
     width: 40vw;
     height: 50vw;
+}
+
+@media screen and (max-width: 768px) {
+    .Archivview {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3vw;
+        justify-content: center;
+        align-items: center;
+    }
 }
