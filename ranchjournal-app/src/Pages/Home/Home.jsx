@@ -169,8 +169,8 @@ export default function Home() {
                     <h1>{leng === 'ru' ? "НАПИШИТЕ НАМ СООБЩЕНИЕ" : leng === 'en' ? "DROP US A MESSAGE" : "DROP US A MESSAGE"}</h1>
                 </div>
                 <div className="MassageInputBox">
-                    <input className="Name" type="text" placeholder="Name:" minLength={4} maxLength={13} />
-                    <input className="Email" type="email" placeholder="Enter Email:" />
+                    <input className="Name" type="text" placeholder="Name:" minLength={4} maxLength={13} autoComplete="off" />
+                    <input className="Email" type="email" placeholder="Enter Email:" autoComplete="off" />
                     <label className="Type"><textarea name="massage" placeholder="Massage:" id="massage" cols="30" rows="10"></textarea></label>
                 </div>
                 <div className="MassageButton">
