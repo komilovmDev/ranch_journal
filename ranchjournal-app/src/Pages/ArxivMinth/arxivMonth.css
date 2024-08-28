@@ -1,0 +1,28 @@
+.Arhiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.ArxivContainersBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li a {
+    text-decoration: none;
+    list-style: none;
+}
