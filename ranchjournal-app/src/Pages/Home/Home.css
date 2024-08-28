@@ -133,7 +133,7 @@ header {
     width: 55vw;
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: wrap-reverse;
     gap: 4vw;
 }

@@ -3,19 +3,23 @@
     flex-direction: row;
 }
 
-.ArxivContainersBox {
+.ArxivContainersBoxs {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 2vw;
-    
+    margin-top: 1vw;
+    justify-content: flex-start;
+
 }
 
-aside {
+.ArxiveBox {
+    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    margin-top: -.0vw;
 }
 
 aside ul {
@@ -25,4 +29,10 @@ aside ul {
 aside ul li a {
     text-decoration: none;
     list-style: none;
+}
+
+.ArxiveBoxs {
+    width: 80%;
+    border: 1px solid #ff6400;
+    border-radius: 5px;
 }

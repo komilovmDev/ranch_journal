@@ -27,7 +27,7 @@ export default function ArxivMonth() {
                 <div className="ArxivTitle">
                     <h1>Arxiv</h1>
                 </div>
-                <div className="ArxivContainersBox">
+                <div className="ArxivContainersBoxs">
                     <aside className="ArxiveBox">
                         <ul>
                             <li>
