@@ -27,8 +27,11 @@ export default function ArxivMonth() {
                 <div className="ArxivTitle">
                     <h1>Arxiv</h1>
                 </div>
-                <div className="ArxivContainersBoxs">
+                <div className="ArxivContainersBoxs Journalview">
                     <aside className="ArxiveBox">
+                        <div className="JournalasideTitle">
+                            <h1> Yillar </h1>
+                        </div>
                         <ul>
                             <li>
                                 <a href="">2024</a>
@@ -44,9 +47,15 @@ export default function ArxivMonth() {
                     <div className="ArxiveBoxs">
                         <div className="arxiveBoxs1">
                             <p>a</p>
+                            <p>a</p>
+                            <p>a</p>
+
                         </div>
                         <div className="arxiveBoxs1">
                             <p>a</p>
+                            <p>a</p>
+                            <p>a</p>
+
                         </div>
                     </div>
                 </div>

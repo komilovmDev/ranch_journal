@@ -66,7 +66,7 @@ export default function Journalview() {
 
     return (
         <section className='Journalview'>
-            <aside>
+            <aside className="JournalviewAside">
                 <div className="JournalasideTitle">
                     <h1>Jurnal bo'limlari</h1>
                 </div>
