@@ -6,8 +6,8 @@ export default function JurnalTalablari() {
     return (
         <div className="ArchiveMain">
             <section className='Archivview'>
-                <img src={archive} alt="" />
                 <img src={archive2} alt="" />
+                <img src={archive} alt="" />
             </section>
 
         </div>
