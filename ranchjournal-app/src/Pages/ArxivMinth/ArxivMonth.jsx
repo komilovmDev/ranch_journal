@@ -38,8 +38,7 @@ export default function ArxivMonth() {
                         </div>
                         <ul>
                             <li><a href="#">2024</a></li>
-                            <li><a href="#">2023</a></li>
-                            <li><a href="#">2022</a></li>
+
                         </ul>
                     </div>
                     <div className="ArxiveBoxs">
