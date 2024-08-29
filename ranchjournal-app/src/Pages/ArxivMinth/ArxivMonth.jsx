@@ -32,7 +32,7 @@ export default function ArxivMonth() {
                     <h1>Arxiv</h1>
                 </div>
                 <div className="ArxivContainersBoxs Journalview">
-                    <aside className="ArxiveBox">
+                    <div className="ArxiveBox">
                         <div className="JournalasideTitle">
                             <h1>Yillar</h1>
                         </div>
@@ -41,7 +41,7 @@ export default function ArxivMonth() {
                             <li><a href="#">2023</a></li>
                             <li><a href="#">2022</a></li>
                         </ul>
-                    </aside>
+                    </div>
                     <div className="ArxiveBoxs">
                         {data.map((item, index) => (
                             <div key={index} className="arxiveBoxs1">
