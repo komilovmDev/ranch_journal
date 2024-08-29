@@ -5,10 +5,10 @@
     gap: 7vw;
 }
 
-.ArchivviewAside {
+aside {
     margin-top: 5.5vw;
     width: 15vw;
-    height: auto;
+    height: 25vw;
     border: .1vw solid #ff6400;
     border-radius: .5vw;
     overflow: hidden;

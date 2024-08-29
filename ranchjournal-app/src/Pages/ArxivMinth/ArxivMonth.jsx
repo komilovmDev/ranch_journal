@@ -7,19 +7,23 @@ import './arxivMonth.css'
 
 export default function ArxivMonth() {
 
-    // const [data, setData] = useState([])
-    // const id = useParams()
+    const [data, setData] = useState([]);
+    const { id } = useParams();
 
-    // const getArxivMonth = async () => {
-    //     const response = await axios.get(`https://api.ranchjournal.uz/arxiv/arxiv-cats/${id.id}/`);
-    //     setData(response.data.results)
-    // }
+    const getArxivMonth = async () => {
+        try {
+            const response = await axios.get(`https://api.ranchjournal.uz/arxiv/arxivs/`);
+            setData(response.data.results);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    }
 
-    // useEffect(() => {
-    //     getArxivMonth()
-    // }, [])
+    useEffect(() => {
+        getArxivMonth();
+    }, []);
 
-    const { leng, setLeng } = useContext(AppContext)
+    const { leng, setLeng } = useContext(AppContext);
 
     return (
         <div className="Month">
@@ -30,37 +34,24 @@ export default function ArxivMonth() {
                 <div className="ArxivContainersBoxs Journalview">
                     <aside className="ArxiveBox">
                         <div className="JournalasideTitle">
-                            <h1> Yillar </h1>
+                            <h1>Yillar</h1>
                         </div>
                         <ul>
-                            <li>
-                                <a href="">2024</a>
-                            </li>
-                            <li>
-                                <a href="">2023</a>
-                            </li>
-                            <li>
-                                <a href="">2022</a>
-                            </li>
+                            <li><a href="#">2024</a></li>
+                            <li><a href="#">2023</a></li>
+                            <li><a href="#">2022</a></li>
                         </ul>
                     </aside>
                     <div className="ArxiveBoxs">
-                        <div className="arxiveBoxs1">
-                            <p>a</p>
-                            <p>a</p>
-                            <p>a</p>
-
-                        </div>
-                        <div className="arxiveBoxs1">
-                            <p>a</p>
-                            <p>a</p>
-                            <p>a</p>
-
-                        </div>
+                        {data.map((item, index) => (
+                            <div key={index} className="arxiveBoxs1">
+                                <img src={item.img} alt="" />
+                                <a target="_blank" href={item.file}>{item.title}</a>
+                            </div>
+                        ))}
                     </div>
                 </div>
-
             </section>
         </div>
-    )
+    );
 }

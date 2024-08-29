@@ -32,7 +32,7 @@ export default function Archivview() {
 
     return (
         <section className='Archivview'>
-            <aside className='ArchivviewAside'>
+            <aside>
                 <div className="AsideTitle">
                     <h1>Arxiv</h1>
                 </div>
