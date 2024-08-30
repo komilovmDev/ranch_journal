@@ -30,7 +30,7 @@ export default function Home() {
     }
 
     const [data2, setData2] = useState([]);
-    console.log(data2);
+
 
     const getJournal = async () => {
         try {
