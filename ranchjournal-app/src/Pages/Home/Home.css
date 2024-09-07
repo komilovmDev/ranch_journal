@@ -184,6 +184,10 @@ header {
     padding-bottom: 50px;
 }
 
+.JournalHome {
+    margin-top: -29.9vw;
+}
+
 .JournalTitle h1 {
     width: 22vw;
     letter-spacing: .1vw;

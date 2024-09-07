@@ -31,7 +31,7 @@ function App() {
           <Route path='/arxiv' element={<Arxiv />} />
           <Route path='/arxivmonth/:id' element={<ArxivMonth />} />
           <Route path='/arxivview/:id' element={<Archivview />} />
-          <Route path='/journal' element={<Journal />} />
+          <Route path='/journal/:id' element={<Journal />} />
           <Route path='/jurnalwiev/:id' element={<Journalview />} />
           <Route path='/Umumiy' element={<Umumiy />} />
           <Route path='/Talablari' element={<JurnalTalablari />} />

@@ -1,0 +1,101 @@
+.Journal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4vw;
+    height: 100%;
+
+}
+
+.JournalBolimlar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 2vw;
+
+}
+
+.Journal_A {
+    width: 20%;
+    margin-top: -.2vw;
+}
+
+.JournalBolimCon {
+    display: none;
+    width: 80%;
+    border: .1vw solid #ff6400;
+    border-radius: .5vw;
+    display: flex;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: -2px;
+    font-weight: 500;
+}
+
+.JournalFaqParagraphs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.JournalFaqParagraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2vw;
+}
+
+.JournalFaqParagraph h3 {
+    font-size: 16px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #0071e3;
+}
+
+.JournalFaqParagraph p {
+    font-size: 15px;
+    line-height: 1;
+    color: #666;
+    margin-bottom: 0;
+
+
+}
+
+.JournalFaqParButton {
+    border: none;
+    color: #ff6400;
+    font-size: large;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .Journal {
+        flex-wrap: wrap;
+    }
+
+    .Journal_A {
+        width: 80%;
+
+    }
+
+    .JournalBolimCon {
+        flex-wrap: wrap;
+    }
+}

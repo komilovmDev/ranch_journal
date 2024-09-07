@@ -133,10 +133,10 @@ export default function Home() {
                     }
                 </div>
             </section>
-            <section className="Journal">
-                <div className="JournalGlavTitle">
+            <section className="Journal  JournalHome">
+                {/* <div className="JournalGlavTitle">
                     <h1>{leng == 'uz' ? "Journal Section" : leng == 'ru' ? "РАЗДЕЛ ЖУРНАЛА" : "Journal Section"}</h1>
-                </div>
+                </div> */}
                 <div className="JournalContainersBox">
                     {
                         data2.map(item => (
