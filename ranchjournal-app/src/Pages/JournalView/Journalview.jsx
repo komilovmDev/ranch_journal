@@ -1,41 +1,58 @@
 import { Link, useParams } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useState, useEffect, useContext } from "react";
-import axios from 'axios';
 import './Journalview.css';
 import AppContext from "../../context/AppContext";
+import DOMPurify from 'dompurify';
+import axios from 'axios';
 
 export default function Journalview() {
-    const [data, setData] = useState([]);
-    const [journalInfo, setJournalInfo] = useState([]);
+    const [data, setData] = useState([]); // Categories data
+    const [journalInfo, setJournalInfo] = useState([]); // Journal entries data
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
     const { id } = useParams();
     const { leng } = useContext(AppContext);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [expandedId, setExpandedId] = useState(null);
+    const DOMAIN = "https://api.ranchjournal.uz";
 
+    // Fetch journal categories
     const getJournal = async () => {
         try {
             const response = await axios.get("https://api.ranchjournal.uz/journal-categories/");
-            setData(response.data.results);
+            setData(response.data.results || []); // Ensure `data` is always an array
         } catch (error) {
             console.error("Error fetching journal categories:", error);
+            setData([]); // Fallback to an empty array in case of error
         }
     }
 
+    // Fetch journal info based on category ID
     const getJournalInfo = async () => {
-        try {
-            const response = await axios.get(`https://api.ranchjournal.uz/jurnals/${id}/by_category/`);
-            setJournalInfo(response.data.results || []); // Fallback to an empty array if results are undefined
-        } catch (error) {
-            console.error("Error fetching journal info:", error);
-            setJournalInfo([]); // Set an empty array in case of error
+        if (id) {
+            try {
+                const response = await axios.get(`https://api.ranchjournal.uz/jurnals/${id}/by_category/`);
+                setJournalInfo(response.data); // Ensure `journalInfo` is always an array
+            } catch (error) {
+                setJournalInfo("Failed to load journal data."); // Set an empty array in case of error
+            } finally {
+                setLoading(false);
+            }
+        } else {
+            // Handle the case when no specific category is selected
+            setJournalInfo([]);
+            setLoading(false);
         }
-    }
+    };
+
+
 
     useEffect(() => {
         getJournal();
         getJournalInfo();
-    }, [id]); // Refetch data when `id` changes
+    }, [id]);
 
     // Logic to calculate current items to display based on currentPage
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -64,6 +81,10 @@ export default function Journalview() {
         return buttons;
     }
 
+    const toggleExpand = (itemId) => {
+        setExpandedId(expandedId === itemId ? null : itemId);
+    };
+
     return (
         <section className='Journalview'>
             <aside className="JournalviewAside">
@@ -72,7 +93,13 @@ export default function Journalview() {
                 </div>
                 <div className="JournalButton">
                     {data.map(item => (
-                        <Link key={item.id} onClick={() => getJournalInfo()} to={`/jurnalwiev/${item.id}`}>{item.name}</Link>
+                        <Link
+                            key={item.id}
+                            to={`/jurnalwiev/${item.id}`}
+                            className={item.id === parseInt(id) ? 'active' : ''}
+                        >
+                            {item.name}
+                        </Link>
                     ))}
                 </div>
             </aside>
@@ -82,9 +109,9 @@ export default function Journalview() {
                 </div>
                 <div className="JournalContentContainer">
                     {currentItems.map(item => (
-                        <div className="ContentContainerBox" key={item.id}>
+                        <div className="ContentContainerBox" key={item}>
+                            <img src={`${DOMAIN}${item.img}`} alt={item.title} />
                             <h3>{leng === 'uz' ? item.title : leng === 'ru' ? item.title_ru : item.title_en}</h3>
-                            <p dangerouslySetInnerHTML={{ __html: leng === 'uz' ? item.desc : leng === 'ru' ? item.desc_ru : item.desc_en }}></p>
                         </div>
                     ))}
                 </div>

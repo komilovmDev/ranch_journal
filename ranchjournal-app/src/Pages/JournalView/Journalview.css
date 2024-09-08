@@ -86,12 +86,22 @@
 }
 
 .ContentContainerBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+
     background-color: white;
     padding: .5vw;
     border-radius: 1vw;
 }
 
+.ContentContainerBox img {
+    width: 20%;
+}
+
 .ContentContainerBox h3 {
+    width: 80%;
     color: #ff6400;
     font-size: .9vw;
     font-family: sans-serif;
