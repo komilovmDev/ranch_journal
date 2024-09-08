@@ -43,3 +43,10 @@
     gap: 10px;
     font-family: sans-serif;
 }
+
+@media screen and (max-width: 768px) {
+    .taxrirConImg img {
+        width: 51vw;
+        height: 38vw;
+    }
+}

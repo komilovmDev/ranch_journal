@@ -77,7 +77,7 @@ export default function Taxririyat() {
                 <div className="JournalButton">
                     {data && data.results && data.results.length > 0 ? (
                         data.results.map(item => (
-                            <Link to={`/journal/${item.id}`} key={item.id}>
+                            <Link to={`/arxivmonth/${item.id}`} key={item.id}>
                                 {item.name}
                             </Link>
                         ))
@@ -99,7 +99,7 @@ export default function Taxririyat() {
                                         <div className="JournalContentContainer" key={taxriryat.id}>
                                             <div className="taxrirCon">
                                                 <div className="taxrirConImg">
-                                                    <img src={taxriryat.image} alt={taxriryat.full_name} />
+                                                    <img className="taxriryatImg" src={taxriryat.image} alt={taxriryat.full_name} />
                                                 </div>
                                                 <div className="taxrirRight">
                                                     <ul>
