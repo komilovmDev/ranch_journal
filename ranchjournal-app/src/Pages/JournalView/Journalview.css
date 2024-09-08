@@ -98,6 +98,7 @@
 
 .ContentContainerBox img {
     width: 20%;
+    border-radius: 1px;
 }
 
 .ContentContainerBox h3 {
