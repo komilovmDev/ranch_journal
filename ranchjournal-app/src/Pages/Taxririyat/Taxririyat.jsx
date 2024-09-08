@@ -77,7 +77,7 @@ export default function Taxririyat() {
                 <div className="JournalButton">
                     {data && data.results && data.results.length > 0 ? (
                         data.results.map(item => (
-                            <Link to={`/journal/${item.id}`} key={item.id}>
+                            <Link to={`/jurnalwiev/${item.id}`} key={item.id}>
                                 {item.name}
                             </Link>
                         ))
