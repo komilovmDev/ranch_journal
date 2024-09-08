@@ -111,7 +111,7 @@ export default function Journalview() {
                     {currentItems.map(item => (
                         <div className="ContentContainerBox" key={item}>
                             <img src={`${DOMAIN}${item.img}`} alt={item.title} />
-                            <h3 target="_blank" href={item.file}>{leng === 'uz' ? item.title : leng === 'ru' ? item.title_ru : item.title_en}</h3>
+                            <h3 target="_blank" href={`${DOMAIN}${item.file}`}>{leng === 'uz' ? item.title : leng === 'ru' ? item.title_ru : item.title_en}</h3>
                         </div>
                     ))}
                 </div>
