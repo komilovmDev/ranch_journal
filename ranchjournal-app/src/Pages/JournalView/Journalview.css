@@ -100,11 +100,13 @@
     width: 20%;
 }
 
-.ContentContainerBox h3 {
+.ContentContainerBox a {
     width: 80%;
     color: #ff6400;
     font-size: .9vw;
+    font-weight: bold;
     font-family: sans-serif;
+    color: #ff6400;
 }
 
 .ContentContainerBox p {
