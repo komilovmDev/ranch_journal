@@ -70,7 +70,7 @@ export default function Taxririyat() {
 
     return (
         <section className='Journalview'>
-            <aside>
+            <aside className="TahriryatAside">
                 <div className="JournalasideTitle">
                     <h1>Jurnal bo'limlari</h1>
                 </div>

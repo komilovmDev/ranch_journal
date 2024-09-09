@@ -63,23 +63,23 @@ export default function Journalview() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     // Rendering pagination buttons
-    const renderPaginationButtons = () => {
-        const totalPages = Math.ceil(journalInfo.length / itemsPerPage);
-        const visiblePages = 5;
-        const buttons = [];
-        let startPage = currentPage - Math.floor(visiblePages / 2);
-        startPage = Math.max(startPage, 1);
-        let endPage = startPage + visiblePages - 1;
-        endPage = Math.min(endPage, totalPages);
+    // const renderPaginationButtons = () => {
+    //     const totalPages = Math.ceil(journalInfo.length / itemsPerPage);
+    //     const visiblePages = 5;
+    //     const buttons = [];
+    //     let startPage = currentPage - Math.floor(visiblePages / 2);
+    //     startPage = Math.max(startPage, 1);
+    //     let endPage = startPage + visiblePages - 1;
+    //     endPage = Math.min(endPage, totalPages);
 
-        for (let i = startPage; i <= endPage; i++) {
-            buttons.push(
-                <button key={i} onClick={() => paginate(i)}>{i}</button>
-            );
-        }
+    //     for (let i = startPage; i <= endPage; i++) {
+    //         buttons.push(
+    //             <button key={i} onClick={() => paginate(i)}>{i}</button>
+    //         );
+    //     }
 
-        return buttons;
-    }
+    //     return buttons;
+    // }
 
     const toggleExpand = (itemId) => {
         setExpandedId(expandedId === itemId ? null : itemId);
@@ -115,11 +115,11 @@ export default function Journalview() {
                         </div>
                     ))}
                 </div>
-                <div className="Pagination">
+                {/* <div className="Pagination">
                     <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}><FaChevronLeft /></button>
                     {renderPaginationButtons()}
                     <button onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === Math.ceil(journalInfo.length / itemsPerPage)}><FaChevronRight /></button>
-                </div>
+                </div> */}
             </div>
         </section>
     )

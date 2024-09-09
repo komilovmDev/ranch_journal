@@ -291,7 +291,7 @@
     .Journalview aside {
         width: 90vw;
         height: auto;
-        border-radius: 5vw;
+        border-radius: 1vw;
     }
 
     .JournalasideTitle {
@@ -313,11 +313,10 @@
     }
 
     .JournalTitle {
-        height: 15vw;
+        height: 17vw;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: 3vw;
     }
 
     .JournalTitle h1 {
@@ -330,6 +329,15 @@
 
         gap: 10vw;
         padding: 2.5vw;
+    }
+
+    .ContentContainerBox a {
+        width: 80%;
+        color: #ff6400;
+        font-size: .9vw;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: #ff6400;
     }
 
     .TaxrirTitle h1 {
@@ -354,16 +362,25 @@
     }
 
     .taxriryatImg {
-        width: 51vw;
-        height: 54vw;
+        width: 21vw;
+        height: 24vw;
     }
 
     .ContentContainerBox {
+        display: flex;
+        flex-direction: column;
         padding: 2vw;
         border-radius: 4vw;
     }
 
-    .ContentContainerBox h3 {
+    .ContentContainerBox img {
+        width: 50vw;
+        height: 60vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ContentContainerBox a {
         font-size: 4.5vw;
         font-weight: 400;
     }
