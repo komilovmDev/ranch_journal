@@ -23,6 +23,7 @@
 .ArxiveBox ul {
     list-style: none;
     align-items: center;
+    padding: 0px 10px;
 }
 
 .ArxiveBox ul li a {
@@ -43,12 +44,15 @@
 
 .ArxiveBoxs {
     width: 80%;
+    height: 60vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     word-wrap: break-word;
     border: 1px solid #ff6400;
     border-radius: 5px;
     gap: 3vw;
+    overflow-y: auto;
 }
 
 .arxiveBoxs1 {
