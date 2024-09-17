@@ -53,6 +53,7 @@
     border-radius: 5px;
     gap: 3vw;
     overflow-y: auto;
+    padding: 1vw;
 }
 
 .arxiveBoxs1 {
