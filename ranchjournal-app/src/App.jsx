@@ -15,6 +15,7 @@ import { useState } from 'react';
 import JurnalTalablari from './Pages/jurnalTalablari/JurnalTalablari';
 import NotificationBar from './nofeciton/NotificationBar';
 import Footer from './Pages/Footer/Footer';
+import Elonlar from './Pages/elonlar/Elonlar';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/Umumiy' element={<Umumiy />} />
           <Route path='/Talablari' element={<JurnalTalablari />} />
           <Route path='/Tahririyat' element={<Taxririyat />} />
+          <Route path='/elonlar' element={<Elonlar />} />
         </Routes>
         <Footer />
       </div>

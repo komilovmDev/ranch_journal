@@ -1,0 +1,18 @@
+.elonlar {
+    width: 80%;
+    margin: 2vw auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;   
+}
+.elon_title {
+    font-size: 2vw;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.elonlar img {
+    width: 35vw;
+}

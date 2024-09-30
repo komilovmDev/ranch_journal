@@ -29,7 +29,8 @@ export default function Navbar() {
             { label: 'Jurnal Talablari', path: '/Talablari' },
             { label: 'Tahririyat', path: '/Tahririyat' },
             { label: 'Arxiv', path: '/arxiv' },
-            { label: 'Jurnal bo`limlari', path: '/jurnalwiev/4' }
+            { label: 'Jurnal bo`limlari', path: '/jurnalwiev/4' },
+            { label: 'Elonlar', path: '/elonlar' }
         ],
         ru: [
             { label: 'ГЛАВНАЯ', path: '/' },
@@ -37,7 +38,8 @@ export default function Navbar() {
             { label: 'ТРЕБОВАНИЯ К ЖУРНАЛУ', path: '/Talablari' },
             { label: 'РЕДКОЛЛЕГИЯ', path: '/Tahririyat' },
             { label: 'АРХИВ', path: '/arxiv' },
-            { label: 'РАЗДЕЛЫ ЖУРНАЛА', path: '/jurnalwiev/4' }
+            { label: 'РАЗДЕЛЫ ЖУРНАЛА', path: '/jurnalwiev/4' },
+            { label: 'Объявления', path: '/elonlar' }
         ],
         en: [
             { label: 'HOME', path: '/' },
@@ -45,7 +47,8 @@ export default function Navbar() {
             { label: 'jOURNAL REQUIREMENTS', path: '/Talablari' },
             { label: 'EDITORIAL BOARD', path: '/Tahririyat' },
             { label: 'ARCHIVE', path: '/arxiv' },
-            { label: 'JOURNAL SECTIONS', path: '/jurnalwiev/4' }
+            { label: 'JOURNAL SECTIONS', path: '/jurnalwiev/4' },
+            { label: 'Announcements', path: '/elonlar' }
         ]
     };
 
