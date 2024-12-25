@@ -1,5 +1,5 @@
-import archive from '../../assets/jv2.jpg'; // Ensure this file exists
-import archive2 from '../../assets/jv1.jpg'; // Corrected file name
+import archive from '../../assets/j3.jpg';
+import archive2 from '../../assets/j4.jpg'; 
 import './jurnal.css';
 
 export default function JurnalTalablari() {
