@@ -25,7 +25,7 @@ function App() {
   return (
     <AppContext.Provider value={{ leng, setLeng }}>
       <div className="App">
-        <NotificationBar /> {/* Add the NotificationBar component here */}
+        <NotificationBar />
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -36,7 +36,7 @@ function App() {
           <Route path='/jurnalwiev/:id' element={<Journalview />} />
           <Route path='/Umumiy' element={<Umumiy />} />
           <Route path='/Talablari' element={<JurnalTalablari />} />
-          <Route path='/Tahririyat' element={<Taxririyat />} />
+          <Route path='/Tahririyat' element={<Taxririyat leng={leng} setLeng={leng} />} />
           <Route path='/elonlar' element={<Elonlar />} />
         </Routes>
         <Footer />

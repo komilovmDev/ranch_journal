@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import './Taxririyat.css';
+import davronaImg from './davrona.jpg'
 
-export default function Taxririyat() {
+export default function Taxririyat({leng}) {
     const [data, setData] = useState([]);
     const [journalInfo, setJournalInfo] = useState([]);
     const [taxData, setTaxData] = useState([]);
@@ -87,6 +88,28 @@ export default function Taxririyat() {
                 </div>
             </aside>
             <div>
+                <div className="JournalContentRight">
+                    <div>
+                        <div className="TaxrirTitle">
+                            <h1>ELEKTRON ILMIY JURNAL BOSH MUHARRIR</h1>
+                        </div>
+                        <div className="JournalContentContainer" >
+                            <div className="taxrirCon">
+                                <div className="taxrirConImg">
+                                    <img className="taxriryat" src={davronaImg} />
+                                </div>
+                                <div className="taxrirRight">
+                                    <ul>
+                                        <li>{leng == 'uz' ? "RUZMETOV DAVRON IBROGIMOVICH" : leng == 'ru' ? "РУЗМЕТОВ ДАВРОН ИБРОГИМОВИЧ" : "RUZMETOV DAVRON IBROGIMOVICH"}</li>
+                                        <li>{leng == 'uz' ? "Iqtisodiyot fanlari bo‘yicha falsafa doktori (PhD)" : leng == 'ru' ? "Доктор философии по экономическим наукам (PhD)" : "Doctor of Philosophy in Economical Sciences (PhD)"}</li>
+                                        <li>+998 90 323 99 23</li>
+                                        <li>d.ruzmetov@utu-ranch.uz</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="JournalContentRight">
                     {Array.isArray(taxData) && taxData.length > 0 ? (
                         taxData.map(item => (
