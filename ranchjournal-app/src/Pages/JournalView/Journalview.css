@@ -35,8 +35,34 @@
     color: #ff6400;
 }
 
+.JournalButton button {
+    text-decoration: none;
+    width: 100%;
+    height: 3vw;
+    padding: 0 .5vw;
+    border-top: .1vw solid rgba(128, 128, 128, 0.288);
+    transition: all .3s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #ff6400;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    border-bottom: 1px solid #ff6400;
+}
+
+
 .JournalButton a:hover {
     background-color: rgba(128, 128, 128, 0.103);
+}
+
+.JournalButton button:hover {
+    background-color: rgba(0, 0, 0, 0.086);
+    
 }
 
 .JournalasideTitle {
