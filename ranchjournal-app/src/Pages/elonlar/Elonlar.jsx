@@ -44,9 +44,9 @@ export default function Elonlar() {
             <aside>
                 <div className="JournalasideTitle">
                     <h1>
-                        {leng === 'uz' ? "Journal bo'limlari" : 
-                         leng === 'ru' ? "Разделы журнала" : 
-                         "Journal sections"}
+                        {leng === 'uz' ? "Bo'limlar" : 
+                         leng === 'ru' ? "Разделы" : 
+                         "Sections"}
                     </h1>
                 </div>
                 <div className="JournalButton">
