@@ -8,15 +8,18 @@ export default function Elonlar() {
     const [data, setData] = useState([]);
     const [journalInfo, setJournalInfo] = useState([]);
     const [data2, setData2] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(3);
-    
+    const [selectedCategory, setSelectedCategory] = useState(() => data[0]?.id || 3);
     const [loading, setLoading] = useState(true); // PDF yuklanish holatini saqlash
 
     const getInfos = async (categoryId: number) => {
         try {
             const response = await axios.get(`https://api.ranchjournal.uz/konfirensiya-content/?category_id=${categoryId}`);
             setData2(response.data.results);
-            console.log("Loaded PDF URLs:", response.data.results.map(item => item.files_k));
+            console.log("Loaded media URLs:", response.data.results.map(item => ({
+                pdf: item.files_k,
+                img: item.images_k,
+                video: item.videos_k
+            })));
         } catch (error) {
             console.error("Error fetching content:", error);
         }
@@ -57,7 +60,7 @@ export default function Elonlar() {
                             key={item.id}
                             onClick={() => {
                                 setSelectedCategory(item.id);
-                                setLoading(true); // Kategoriya almasahada loading boshlanadi
+                                setLoading(true);
                             }}
                             className={selectedCategory === item.id ? "active" : ""}
                         >
@@ -78,8 +81,13 @@ export default function Elonlar() {
                         : leng === 'ru' ? item.files_k?.[0]?.file_pdf_ru
                             : item.files_k?.[0]?.file_pdf_en;
 
+                    const videoUrl = leng === 'uz' ? item.videos_k?.[0]?.file_video_uz
+                        : leng === 'ru' ? item.videos_k?.[0]?.file_video_ru
+                            : item.videos_k?.[0]?.file_video_en;
+
                     return (
                         <div key={item.id} className="content-item">
+                            {/* Rasm */}
                             {imageUrl && (
                                 <img
                                     style={{ width: '100%' }}
@@ -88,6 +96,18 @@ export default function Elonlar() {
                                 />
                             )}
 
+                            {/* Video */}
+                            {videoUrl && (
+                                <video
+                                    controls
+                                    style={{ width: '100%', marginTop: '10px' }}
+                                >
+                                    <source src={videoUrl} type="video/mp4" />
+                                    Sizning brauzeringiz ushbu videoni qo‘llab-quvvatlamaydi.
+                                </video>
+                            )}
+
+                            {/* PDF */}
                             {pdfUrl ? (
                                 <>
                                     <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="pdf-link">
@@ -100,7 +120,7 @@ export default function Elonlar() {
                                         src={`https://docs.google.com/gview?url=${encodeURIComponent(pdfUrl)}&embedded=true`}
                                         title="PDF Viewer"
                                         className="responsiveIframe"
-                                        onLoad={() => setLoading(false)} // PDF yuklanganda loading tugaydi
+                                        onLoad={() => setLoading(false)}
                                         style={{
                                             width: '100%',
                                             height: '500px',
