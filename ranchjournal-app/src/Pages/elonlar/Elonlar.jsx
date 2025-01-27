@@ -8,7 +8,8 @@ export default function Elonlar() {
     const [data, setData] = useState([]);
     const [journalInfo, setJournalInfo] = useState([]);
     const [data2, setData2] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(1);
+    const [selectedCategory, setSelectedCategory] = useState(3);
+    
     const [loading, setLoading] = useState(true); // PDF yuklanish holatini saqlash
 
     const getInfos = async (categoryId: number) => {
